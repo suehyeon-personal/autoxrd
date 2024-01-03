@@ -25,6 +25,9 @@
 <div class="container mt-5">
     <div class="card" id="dropArea" ondrop="dropHandler(event)" ondragover="dragOverHandler(event)">
         <div class="card-body">
+            <div class="big-icon">
+                <i class="fa fa-file"></i>
+            </div>
             파일을 드래그 & 드랍하세요.
         </div>
     </div>
@@ -36,22 +39,22 @@
 <script src="src/js/fileDropModule.js"></script>
 
 <script src="src/js/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/smoothscroll.js"></script>
-<script src="js/isotope.js"></script>
-<script src="js/imagesloaded.min.js"></script>
-<script src="js/nivo-lightbox.min.js"></script>
-<script src="js/wow.min.js"></script>
-<script src="js/custom.js"></script>
+<script src="src/js/bootstrap.min.js"></script>
+<script src="src/js/smoothscroll.js"></script>
+<script src="src/js/isotope.js"></script>
+<script src="src/js/imagesloaded.min.js"></script>
+<script src="src/js/nivo-lightbox.min.js"></script>
+<script src="src/js/wow.min.js"></script>
+<script src="src/js/custom.js"></script>
 
 
-<script>
+<!--script>
 
     setupFileDropHandler('drop-area', function(fileContent) {
       console.log(fileContent);
       document.getElementById('drop-area').innerHTML = `<p>파일 내용: ${fileContent}</p>`;
     });
-</script>
+</script-->
 
 </body>
 </html>

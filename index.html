@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>File Drag and Drop</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    	<!-- STYLESHEET CSS FILES -->
+	<link rel="stylesheet" href="src/css/bootstrap.min.css">
+	<link rel="stylesheet" href="src/css/animate.min.css">
+	<link rel="stylesheet" href="src/css/font-awesome.min.css">
+	<link rel="stylesheet" href="src/css/nivo-lightbox.css">
+	<link rel="stylesheet" href="src/css/nivo_themes/default/default.css">
+	<link rel="stylesheet" href="src/css/style.css">
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='src/text/css'>    
+</head>
+
+<body>
+
+<div class="container mt-5">
+    <div class="card" id="dropArea" ondrop="dropHandler(event)" ondragover="dragOverHandler(event)">
+        <div class="card-body">
+            파일을 드래그 & 드랍하세요.
+        </div>
+    </div>
+
+    <div class="mt-3" id="fileContent"></div>
+</div>
+
+<!-- JAVASCRIPT JS FILES -->
+<script src="src/js/fileDropModule.js"></script>
+
+<script src="src/js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/smoothscroll.js"></script>
+<script src="js/isotope.js"></script>
+<script src="js/imagesloaded.min.js"></script>
+<script src="js/nivo-lightbox.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/custom.js"></script>
+
+
+<script>
+
+    setupFileDropHandler('drop-area', function(fileContent) {
+      console.log(fileContent);
+      document.getElementById('drop-area').innerHTML = `<p>파일 내용: ${fileContent}</p>`;
+    });
+</script>
+
+</body>
+</html>
